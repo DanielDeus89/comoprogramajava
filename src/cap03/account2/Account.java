@@ -21,6 +21,14 @@ public class Account {
             balance += depositAmount;
         }
     }
+
+    public void withdraw(Double withdrawAmount){
+        if (withdrawAmount > balance){
+            System.out.println("Withdrawal amount exceeded account balance");
+        }else {
+            balance -= withdrawAmount;
+        }
+    }
     public double getBalance() {
         return balance;
     }

@@ -1,23 +1,17 @@
 package cap02;
 
-import java.util.Scanner;
+import javax.swing.*;
 
 public class Addition {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
 
-        int number1;
-        int number2;
-        int sum;
+        var number1 = Integer.parseInt(JOptionPane.showInputDialog("Enter first integer:"));
+        var number2 = Integer.parseInt(JOptionPane.showInputDialog("Enter second Number:"));
 
-        System.out.print("Enter first integer: ");
-        number1 = input.nextInt();
+        var sum = number1 + number2;
 
-        System.out.print("Enter second Number: ");
-        number2 = input.nextInt();
+        String message = String.format("Sum is: %s", sum);
 
-        sum =  number1 + number2;
-
-        System.out.printf("Sum is %d%n", sum);
+        JOptionPane.showMessageDialog(null, message);
     }
 }
