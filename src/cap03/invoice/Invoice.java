@@ -45,11 +45,13 @@ public class Invoice {
         this.preco = preco;
     }
 
-    public Double getInvoiceAmount(){
+    public double getInvoiceAmount(){
         return this.quantidade * this.preco;
     }
 
-    public static void notaFiscal(Invoice invoice){
-        System.out.println(invoice.descricao + " " + " " + invoice.preco + " " + invoice.getQuantidade() + " " +invoice.getInvoiceAmount());
+    public static void notaFiscal(Invoice invoice) {
+        System.out.printf("Nota Fiscal: %s%nDescrição: %s%nPreço Unitário: %.2f%nQuantidade: %d%nTotal: %.2f%n",
+                invoice.getNumero(), invoice.getDescricao(), invoice.getPreco(), invoice.getQuantidade(), invoice.getInvoiceAmount());
     }
+
 }

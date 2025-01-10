@@ -8,6 +8,8 @@ public class AccountTest {
 
         Account myAccount = new Account();
 
+        myAccount.setName("Eduardo");
+
         System.out.printf("Initial name is: %s%n", myAccount.getName());
 
         System.out.println("Please Enter the name: ");
@@ -17,5 +19,6 @@ public class AccountTest {
         System.out.println(" ");
 
         System.out.printf("Name in object myAccount is: %s%n", myAccount.getName());
+
     }
 }
